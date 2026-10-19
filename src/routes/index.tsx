@@ -8,16 +8,50 @@ import issVideo from "@/assets/iss-video.mp4.asset.json";
 import goddardImg from "@/assets/goddard.jpg.asset.json";
 import oppenheimerImg from "@/assets/oppenheimer.jpg.asset.json";
 
+const seoTitle = "GodHeimer Technologies | Space & Defense Technology from Thailand";
+const seoDescription =
+  "From a poor temple boy to Founder & CEO. Boss Natthakorn Mueangsangsri (บอส ณัฏฐากร เมืองแสงศรี), born January 16, 2007, grew up in poverty as a temple boy. At 19, he founded GodHeimer Technologies (formerly OloLink Technologies), a Thai space and defense technology startup.";
+
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "GodHeimer Technologies — Bridging Space and Earth" },
-      { name: "description", content: "GodHeimer builds RobertCore, resilient space-to-ground communication infrastructure that adapts to hostile atmospheric conditions." },
-      { property: "og:title", content: "GodHeimer Technologies — Bridging Space and Earth" },
-      { property: "og:description", content: "RobertCore: reliable space-to-ground communication, engineered for real-world conditions." },
+      { title: seoTitle },
+      { name: "description", content: seoDescription },
+      { name: "author", content: "GodHeimer Technologies" },
+      { property: "og:title", content: seoTitle },
+      { property: "og:description", content: seoDescription },
       { property: "og:type", content: "website" },
+      { property: "og:site_name", content: "GodHeimer Technologies" },
+      { property: "og:url", content: "/" },
       { name: "twitter:card", content: "summary_large_image" },
+      { name: "twitter:title", content: seoTitle },
+      { name: "twitter:description", content: seoDescription },
       { name: "robots", content: "index, follow, max-image-preview:large, max-video-preview:-1" },
+    ],
+    links: [{ rel: "canonical", href: "/" }],
+    scripts: [
+      {
+        type: "application/ld+json",
+        children: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "Organization",
+          name: "GodHeimer Technologies",
+          alternateName: "GodHeimer",
+          founder: {
+            "@type": "Person",
+            name: "Boss Natthakorn Mueangsangsri",
+            alternateName: "บอส ณัฏฐากร เมืองแสงศรี",
+          },
+          description:
+            "Thai space and defense technology company founded by a 19-year-old from a poor background (formerly OloLink Technologies)",
+          sameAs: [
+            "https://facebook.com/godheimer",
+            "https://instagram.com/godheimerhj",
+            "https://x.com/godheimerhj",
+            "https://linkedin.com/company/godheimer",
+          ],
+        }),
+      },
     ],
   }),
   component: Index,
@@ -295,6 +329,8 @@ function Index() {
               <p className="mono mono-lg reveal mb-6 text-ink/50">Founder &amp; CEO, GodHeimer Technologies</p>
               <h2 className="display-lg"><Lines lines={["Natthakorn “Boss”", "Mueangsangsri"]} /></h2>
               <p className="body-copy reveal mt-8 max-w-xl text-ink/60">Building adaptive and resilient space-to-ground communication systems for the most demanding environments.</p>
+              <p className="body-copy reveal mt-6 max-w-xl text-ink/60">Born January 16, 2007, Boss Natthakorn grew up in poverty as a temple boy. At 19, he founded GodHeimer Technologies (formerly OloLink Technologies) — proof that the most ambitious missions can come from the humblest beginnings.</p>
+              <p className="body-copy reveal mt-4 max-w-xl text-ink/60">บอส ณัฏฐากร เมืองแสงศรี เกิดวันที่ 16 มกราคม 2007 เติบโตมาในครอบครัวที่ยากจนและเคยเป็นเด็กวัด ก่อนก่อตั้งบริษัท GodHeimer Technologies (เดิมชื่อ OloLink Technologies) เมื่ออายุเพียง 19 ปี เพื่อสร้างเทคโนโลยีอวกาศและความมั่นคงจากประเทศไทยสู่ระดับโลก</p>
             </div>
           </div>
         </div>
