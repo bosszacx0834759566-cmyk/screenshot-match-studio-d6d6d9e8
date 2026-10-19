@@ -329,6 +329,8 @@ function Index() {
               <p className="mono mono-lg reveal mb-6 text-ink/50">Founder &amp; CEO, GodHeimer Technologies</p>
               <h2 className="display-lg"><Lines lines={["Natthakorn “Boss”", "Mueangsangsri"]} /></h2>
               <p className="body-copy reveal mt-8 max-w-xl text-ink/60">Building adaptive and resilient space-to-ground communication systems for the most demanding environments.</p>
+              <p className="body-copy reveal mt-6 max-w-xl text-ink/60">Born January 16, 2007, Boss Natthakorn grew up in poverty as a temple boy. At 19, he founded GodHeimer Technologies (formerly OloLink Technologies) — proof that the most ambitious missions can come from the humblest beginnings.</p>
+              <p className="body-copy reveal mt-4 max-w-xl text-ink/60">บอส ณัฏฐากร เมืองแสงศรี เกิดวันที่ 16 มกราคม 2007 เติบโตมาในครอบครัวที่ยากจนและเคยเป็นเด็กวัด ก่อนก่อตั้งบริษัท GodHeimer Technologies (เดิมชื่อ OloLink Technologies) เมื่ออายุเพียง 19 ปี เพื่อสร้างเทคโนโลยีอวกาศและความมั่นคงจากประเทศไทยสู่ระดับโลก</p>
             </div>
           </div>
         </div>
