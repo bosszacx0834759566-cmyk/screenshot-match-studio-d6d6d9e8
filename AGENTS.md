@@ -11,3 +11,5 @@
 
 - Reference downloaded video through a current-project Lovable Assets pointer, shared by the homepage and menu, so both play the same source reliably.
 - Keep all published photos and clips in current-project Lovable Assets and preserve referenced assets; temporary files and other projects' assets are not reliable deployment sources.
+
+- Media (video/photos) must be stored as current-project Lovable Assets pointers in src/assets/*.asset.json; never delete or replace them, never point at another project's assets. Why: other projects' or temp files vanish after publish. Guarded by src/test/media-assets.test.ts.
