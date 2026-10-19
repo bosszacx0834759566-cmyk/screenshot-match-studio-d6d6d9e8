@@ -7,6 +7,7 @@ import { OriginPanel } from "@/components/OriginPanel";
 import issVideo from "@/assets/iss-video.mp4.asset.json";
 import goddardImg from "@/assets/goddard.jpg.asset.json";
 import oppenheimerImg from "@/assets/oppenheimer.jpg.asset.json";
+import { FOUNDER_BIRTH_ISO, FOUNDER_BIRTH_EN, FOUNDER_BIRTH_TH, founderAge } from "@/founder";
 
 const seoTitle = "GodHeimer Technologies | Space & Defense Technology from Thailand";
 const seoDescription =
