@@ -13,17 +13,6 @@ const seoTitle = "GodHeimer Technologies | Space & Defense Technology from Thail
 const seoDescription =
   "From a poor temple boy to Founder & CEO. Boss Natthakorn Mueangsangsri (บอส ณัฏฐากร เมืองแสงศรี), born January 16, 2007, grew up in poverty as a temple boy. At 19, he founded GodHeimer Technologies (formerly OloLink Technologies), a Thai space and defense technology startup.";
 
-const FOUNDER_BIRTH_ISO = "2007-01-16";
-
-function founderAge(now: Date = new Date()): number {
-  const b = new Date(`${FOUNDER_BIRTH_ISO}T00:00:00Z`);
-  let age = now.getUTCFullYear() - b.getUTCFullYear();
-  const beforeBirthday =
-    now.getUTCMonth() < b.getUTCMonth() ||
-    (now.getUTCMonth() === b.getUTCMonth() && now.getUTCDate() < b.getUTCDate());
-  if (beforeBirthday) age -= 1;
-  return age;
-}
 
 
 export const Route = createFileRoute("/")({
