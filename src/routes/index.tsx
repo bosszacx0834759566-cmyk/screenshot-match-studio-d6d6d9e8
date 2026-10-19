@@ -12,6 +12,19 @@ const seoTitle = "GodHeimer Technologies | Space & Defense Technology from Thail
 const seoDescription =
   "From a poor temple boy to Founder & CEO. Boss Natthakorn Mueangsangsri (บอส ณัฏฐากร เมืองแสงศรี), born January 16, 2007, grew up in poverty as a temple boy. At 19, he founded GodHeimer Technologies (formerly OloLink Technologies), a Thai space and defense technology startup.";
 
+const FOUNDER_BIRTH_ISO = "2007-01-16";
+
+function founderAge(now: Date = new Date()): number {
+  const b = new Date(`${FOUNDER_BIRTH_ISO}T00:00:00Z`);
+  let age = now.getUTCFullYear() - b.getUTCFullYear();
+  const beforeBirthday =
+    now.getUTCMonth() < b.getUTCMonth() ||
+    (now.getUTCMonth() === b.getUTCMonth() && now.getUTCDate() < b.getUTCDate());
+  if (beforeBirthday) age -= 1;
+  return age;
+}
+
+
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
@@ -328,6 +341,16 @@ function Index() {
             <div className="lg:col-span-9">
               <p className="mono mono-lg reveal mb-6 text-ink/50">Founder &amp; CEO, GodHeimer Technologies</p>
               <h2 className="display-lg"><Lines lines={["Natthakorn “Boss”", "Mueangsangsri"]} /></h2>
+              <div className="reveal mt-8 flex flex-wrap gap-x-12 gap-y-5 border-t border-line-light pt-6">
+                <div>
+                  <p className="mono text-ink/40">Born · เกิด</p>
+                  <p className="mono mono-lg mt-2 text-ink/80">16 January 2007 · 16 มกราคม 2007</p>
+                </div>
+                <div>
+                  <p className="mono text-ink/40">Age · อายุ</p>
+                  <p className="mono mono-lg mt-2 text-ink/80">{founderAge()} years · {founderAge()} ปี</p>
+                </div>
+              </div>
               <p className="body-copy reveal mt-8 max-w-xl text-ink/60">Building adaptive and resilient space-to-ground communication systems for the most demanding environments.</p>
             </div>
           </div>
