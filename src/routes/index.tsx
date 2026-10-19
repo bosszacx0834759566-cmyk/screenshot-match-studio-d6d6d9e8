@@ -54,6 +54,7 @@ export const Route = createFileRoute("/")({
             "@type": "Person",
             name: "Boss Natthakorn Mueangsangsri",
             alternateName: "บอส ณัฏฐากร เมืองแสงศรี",
+            birthDate: FOUNDER_BIRTH_ISO,
           },
           description:
             "Thai space and defense technology company founded by a 19-year-old from a poor background (formerly OloLink Technologies)",
