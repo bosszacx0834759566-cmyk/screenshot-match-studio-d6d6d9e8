@@ -7,10 +7,13 @@ import { OriginPanel } from "@/components/OriginPanel";
 import issVideo from "@/assets/iss-video.mp4.asset.json";
 import goddardImg from "@/assets/goddard.jpg.asset.json";
 import oppenheimerImg from "@/assets/oppenheimer.jpg.asset.json";
+import { FOUNDER_BIRTH_ISO, FOUNDER_BIRTH_EN, FOUNDER_BIRTH_TH, founderAge } from "@/founder";
 
 const seoTitle = "GodHeimer Technologies | Space & Defense Technology from Thailand";
 const seoDescription =
   "From a poor temple boy to Founder & CEO. Boss Natthakorn Mueangsangsri (บอส ณัฏฐากร เมืองแสงศรี), born January 16, 2007, grew up in poverty as a temple boy. At 19, he founded GodHeimer Technologies (formerly OloLink Technologies), a Thai space and defense technology startup.";
+
+
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -41,6 +44,7 @@ export const Route = createFileRoute("/")({
             "@type": "Person",
             name: "Boss Natthakorn Mueangsangsri",
             alternateName: "บอส ณัฏฐากร เมืองแสงศรี",
+            birthDate: FOUNDER_BIRTH_ISO,
           },
           description:
             "Thai space and defense technology company founded by a 19-year-old from a poor background (formerly OloLink Technologies)",
@@ -328,6 +332,16 @@ function Index() {
             <div className="lg:col-span-9">
               <p className="mono mono-lg reveal mb-6 text-ink/50">Founder &amp; CEO, GodHeimer Technologies</p>
               <h2 className="display-lg"><Lines lines={["Natthakorn “Boss”", "Mueangsangsri"]} /></h2>
+              <div className="reveal mt-8 flex flex-wrap gap-x-12 gap-y-5 border-t border-line-light pt-6">
+                <div>
+                  <p className="mono text-ink/40">Born · เกิด</p>
+                  <p className="mono mono-lg mt-2 text-ink/80">{FOUNDER_BIRTH_EN} · {FOUNDER_BIRTH_TH}</p>
+                </div>
+                <div>
+                  <p className="mono text-ink/40">Age · อายุ</p>
+                  <p className="mono mono-lg mt-2 text-ink/80">{founderAge()} years · {founderAge()} ปี</p>
+                </div>
+              </div>
               <p className="body-copy reveal mt-8 max-w-xl text-ink/60">Building adaptive and resilient space-to-ground communication systems for the most demanding environments.</p>
             </div>
           </div>
