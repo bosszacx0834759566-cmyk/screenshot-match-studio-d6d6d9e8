@@ -335,7 +335,7 @@ function Index() {
               <div className="reveal mt-8 flex flex-wrap gap-x-12 gap-y-5 border-t border-line-light pt-6">
                 <div>
                   <p className="mono text-ink/40">Born · เกิด</p>
-                  <p className="mono mono-lg mt-2 text-ink/80">16 January 2007 · 16 มกราคม 2007</p>
+                  <p className="mono mono-lg mt-2 text-ink/80">{FOUNDER_BIRTH_EN} · {FOUNDER_BIRTH_TH}</p>
                 </div>
                 <div>
                   <p className="mono text-ink/40">Age · อายุ</p>
